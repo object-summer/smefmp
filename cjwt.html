@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>移动端开发-bootstrap</title>
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+ 	<link rel="stylesheet" type="text/css" href="css/xszq.css"/>
+ 	<!--[if lt IE 9]>
+  	  <script src="lib/html5shiv/html5shiv.min.js"></script>
+  	  <script src="lib/respond/respond.min.js"></script>
+  	<![endif]-->
+  	<style>
+        .guide-box .gb-right{
+            width: 82%;
+            padding: 0 25px 25px;
+        }
+        .question_list_tittle {
+            font-size: 20px;
+            padding: 20px 0;
+            display: inline-block;
+        }
+        .question_list_ds {
+            padding: 8px 0;
+            cursor: pointer;
+            line-height: 35px;
+            border: 1px solid #CDD0D5;
+            margin-bottom: 0;
+        }
+        .no-top-border{
+            border-top: none;
+        }
+        .question_list_ds .icon{
+            font-size: 18px;
+            color: #919191;
+            position: relative;
+            top: 2.5px;
+            margin: 0 5px 0 10px;
+        }
+        .question_list_answer {
+            padding: 15px 0 15px 40px;
+            line-height: 30px;
+            color: #9A9A9A;
+            display: none;
+            border: 1px solid #CDD0D5;
+            border-top: none;
+            background-color: #FCFCFC;
+        }
+        .cg-account .blue{color: #009eff;}
+        .cg-account .quest-table,
+        .cg-account .tCard,
+        .cg-account .tBank{width: 96%; border-top:1px #ccc solid; border-left:1px #ccc solid; margin: 10px 0;}
+        .cg-account .quest-table tr td,
+        .cg-account .quest-table tr th,
+        .cg-account .tCard tr td,
+        .cg-account .tCard tr th,
+        .cg-account .tBank tr td,
+        .cg-account .tBank tr th{text-align: center; border-bottom:1px #ccc solid; border-right:1px #ccc solid;}
+        .cg-account .quest-table tr td,
+        .cg-account .quest-table tr th{height: 30px; line-height: 30px;}
+        .cg-account .quest-si{float: left; display: inline-block; width: 75%;}
+        .cg-account .invest-code{float: left; display: inline-block; width: 25%;}
+        .quest-tab{color: #666;}
+        .quest-tab span{display: inline-block; height: 35px; line-height: 35px; padding:0 30px;}
+        .quest-tab span:hover{cursor: pointer;}
+        .quest-tab .active{border-bottom: 1px #dd3137 solid; color:#dd3137;}
+        .account-box .active{display: inherit;}
+        .cg-account .tCard{}
+        .cg-account .tCard tr td,
+        .cg-account .tCard tr th{height: 45px; line-height: 45px;}
+        .cg-account .tCard tr .bg-red{background: #f8d6d7;}
+        .cg-account .tCard tr th,
+        .cg-account .tBank tr th{background: #f2f2f2;}
+        .cg-account .tBank tr th,
+        .cg-account .tBank tr td{padding: 10px 15px;}
+        .cg-account .tBank tr .text-red{color: #dd3137;}
+        .cg-account .tBank tr td:nth-child(2){text-align: left;}
+        .cg-account .tBank tr th:nth-child(1),
+        .cg-account .tBank tr td:nth-child(1),
+        .cg-account .tBank tr th:nth-child(3),
+        .cg-account .tBank tr td:nth-child(3){width: 100px;}
+    </style>
+</head>
+<body>
+	<!--头部内容-->
+<header id="header">
+	<div class="topbar hidden-sm hidden-xs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 text-center">
+					<a href="#" class="mobile-link">
+						<i class="glyphicon glyphicon-phone"></i>
+						<span id="">微信品台</span>
+						<i class="glyphicon glyphicon-menu-down"></i>
+						<!--<img src="img/c_06.jpg"/ alt="微信">-->
+					</a>
+				</div>
+				<div class="col-md-5 text-center">
+					<i class="glyphicon glyphicon-phone-alt"></i>
+					<sapn>4006-89-4006（服务时间：9:00-21:00）</sapn>
+				</div>
+				<div class="col-md-2 text-center">
+					<a href="">常见问题</a>
+					<a href="">财富登录</a>
+				</div>
+				<div class="col-md-3 text-center">
+					<a href="" class="btn btn-itcast btn-sm" data-toggle="modal" data-target="#register">免费注册</a>
+					<a href="" class="btn btn-link btn-sm" data-toggle="modal" data-target="#login_form">登录</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="navbar navbar-itcast navbar-static-top" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+		<div class="container">
+			 <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+				    <a class="navbar-brand" href="#">
+			          <i class="icon-icon"></i>
+			          <i class="icon-logo"></i>
+			        </a>
+			</div>
+			<div id="nav_list" class="collapse navbar-collapse">
+	          <ul class="nav navbar-nav">
+	            <li><a href="index.html">投资首页</a></li>
+	            <li class="active"><a href="xszq.html">新手专区</a></li>
+	            <li><a href="aqbz.html">安全保障</a></li>
+	            <li><a href="news.html">新闻公告</a></li>
+	            <li><a href="aboutwe.html">关于我们</a></li>
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right hidden-sm">
+	            <li><a href="#">个人中心</a></li>
+	          </ul>
+	        </div>
+		</div>
+	</div>
+</header>
+<img class="img-guide1" src="img/guide1.jpg">
+<div class="guide-bg">
+	<div class="guide-box">
+		<div class="gb-left">
+
+			<ul>
+				<li id="a" class="active">
+					<a href="xszq.html">操作指南</a>
+				</li>
+				<li id="c">
+					<a href="viptzr.html">VIP投资人</a>
+				</li>
+				<li id="d">
+					<a href="cjwt.html">常见问题</a>
+				</li>
+				<li id="f">
+					<a href="cpjs.html">产品介绍</a>
+				</li>
+			</ul>
+
+		</div>
+		<div class="gb-right">
+			<p class="quest-tab">
+				<span tar="account" class="active">银联账户</span>
+
+			</p>
+			<div class="account-box">
+				<ul id="account" class=" list-paddingleft-2 account active">
+					<ul style="list-style-type: square;" class=" list-paddingleft-2">
+						<li>
+							<p class="question_list_tittle">注册与登录</p>
+						</li>
+						<li>
+							<p id="index-1" class="question_list_ds">
+								<span class="icon-squre-plus icon"></span>
+								<span class="question_wxbwhy">如何开始我在微金所的第一笔投资？</span>
+							</p>
+						</li>
+						<li>
+							<p class="question_list_answer">您只需要简单的四步就能完成首次投资：<br>（1）注册：通过微金所官网或APP注册您的微金所账户；<br>（2）实名认证：按照相关法律规定，需要您输入姓名与身份证号进行实名认证；<br>（3）绑定银行卡：认证完毕后，需要绑定您的银行卡并进行充值；<br>（4）投资：选择自己喜欢的项目开始投资。</p>
+						</li>
+						<li>
+							<p id="index-1" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">我如何注册成为微金所用户？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">您可以点击页面顶部导航条上的“免费注册”按钮或通过微金所手机APP方便地进行注册。您的手机号是您在微金所的身份标识，请您牢记于心。注册成功后，您可以绑定您的常用电子邮箱，方便您找回密码。</p>
+						</li>
+						<li>
+							<p id="index-1" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">我忘记了登录密码该怎么办？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">您可以在登录页面处点击“找回密码”按钮，然后在弹出窗口内填写注册时的手机号或绑定的电子邮箱，并点击获取验证码。在收到短信或邮件后，请将验证码填写至相应位置，或点击邮件中的重新设置密码链接，设置新的登录密码。这样就可以用新的密码登录微金所平台了。</p>
+						</li>
+						<li>
+							<p id="index-1" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">设置登陆密码有什么要求吗？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">登陆密码必须包含数字和英文字母（区分大小写），至少8位字符，不超过16位字符。</p>
+						</li>
+						<li>
+							<p id="index-1" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">为什么要绑定手机？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">通过绑定手机，您可以提高您的微金所账户的安全级别，并及时得到您在微金所进行操作的信息，随时掌控账户动态。并且，手机号是您账户信息的最有效的认证工具，可完成忘记密码时重置登陆密码等操作。</p>
+						</li>
+						<li>
+							<p id="index-1" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">为什么要做实名认证？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">实名认证的目的是验证您所绑定的银行卡是否属于您本人。为了确保您的资金安全，您需要在首次充值前进行实名认证，以便于系统在您充值与提现时校验您的身份。实名认证仅需输入您的身份证号及姓名，全过程仅需10秒钟，非常简单方便。</p>
+						</li>
+						<li>
+							<p class="question_list_tittle">充值与提现</p>
+						</li>
+						<li>
+							<p id="index-2" class="question_list_ds"><span style="top: 6px; vertical-align: top;" class="icon-squre-plus icon"></span><span class="question_wxbwhy">为何需要充值？如何充值？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">在您投资之前，您的账户需要进行充值。微金所是一个“不碰钱”的金融交易平台，并不实际存放投资者和借款人的资金。微金所与上海银联已实现合作，上海银联对您在微金所账户中的资金进行管理，并对您账户内的资金流向进行全方位的专业监管，保障您的投资安全。<br>当您需要为您的账户充值时，只需以下3步即可完成：<br>（1）登录您的账户，进入“个人中心”，点击“充值”按钮；<br>（2）输入您想要充入账户的充值金额；<br>（3）页面跳转到第三方支付平台进行支付即可。<br>成功付款后，系统将显示成功付款并跳转至微金所页面，显示充值成功。您还可以通过“交易记录”查看充值的具体金额及历史记录。</p>
+						</li>
+						<li>
+							<p id="index-2" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">为什么网上银行充值成功，但是微金所帐号里面的余额却没有增加？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">由于在同一时间使用相同第三方充值账户端口进行充值的人可能非常多，在某些时候会造成网银显示金额与微金所账号显示金额不同步的情况。如果您遇到这种情况，请您将网银付款成功的页面截图，然后刷新微金所账户页面。<br>如果刷新未能解决问题，请您致电客服4006-89-4006，客服专员会指导您发送截图并马上处理您的问题。<br>需要您注意的是，在支付页面完成充值后，请点击“返回商户”链接，返回微金所网站，而不要直接关闭支付页面窗口，否则会造成充值金额延后到账的情况。</p>
+						</li>
+						<li>
+							<p id="index-2" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">为什么需要我绑定银行卡？什么时候要绑定银行卡？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">绑定银行卡指的是在微金所储存您的银行卡信息，在方便您之后充值、提现操作的同时保障您的账户安全。在第一次提现之前需要绑定一张银行卡，绑定银行卡的操作非常简单，您只需提供您的银行卡号、开户银行及开户支行（可根据支行地址的关键字模糊查询）。请注意，您绑定的银行卡的持卡人需与您之前认证的姓名相符，否则将不能进行银行卡绑定。</p>
+						</li>
+						<li>
+							<p id="index-2" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">为什么在绑定银行卡的时候长时间显示验证中或绑定失败？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">出现此现象的原因可能有以下几种：<br>（1）微金所账号未通过实名认证；<br>（2）银行开户行信息错误；<br>（3）银行账号、户名错误，或是账号和户名不符；<br>（4）银行卡账户冻结或正在办理挂失。<br>如果遇到以上情况，我们会在收到银行转账失败的通知后解除您的提现资金冻结，并及时通知您相关信息，请您不必担心资金安全。</p>
+						</li>
+						<li>
+							<p id="widthdraw" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">我如何提现？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">您在“个人中心”页面可看到“提现”按钮，点击即可进行“提现”操作。因为您已经绑定了银行卡，只需输入不超过可提现金额的数值和提现密码即可完成提现请求。微金所工作人员会在下1个工作日内将您的提现申请提交第三方支付公司，第三方支付公司会跟您的提现行进行结算，一般提交当日或提交后下一个工作日到您的银行卡内。请注意，每笔提现操作将由第三方支付公司收取2元提现费，在提现总额中自行扣除。如投资人充值完毕后，未投资即申请提现，除收取“每笔提现操作2元”的转账费用外，还将收取未投资金额0.6%的通道结算手续费。</p>
+						</li>
+						<li>
+							<p id="index-2" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">提现时我需要进行什么验证？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">在您提现时，需要验证提现密码和短信验证码。点击获取短信码，系统将自动发送动态验证码至您的手机，您需要在页面上填写此动态验证码进行确认。</p>
+						</li>
+						<li>
+							<p id="index-2" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">提现需要多长时间？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">因存在提现银行与第三方支付公司交易效率差异，提现资金会在提交申请之后的2到3个工作日进入您的银行账户，村镇银行或农村信用社的到账时间会有所增加，如遇节假日，到账时间将会进行顺延。</p>
+						</li>
+						<li>
+							<p id="index-2" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy…4"><span class="question_wxbwhy">如何增加我的登陆密码的安全性？</span></span>
+							</p>
+						</li>
+						<li>
+							<p class="question_list_answer">请仔细阅读以下常见的安全措施：<br>（1）密码要保密，且定期更改；<br>（2）请使用8-16位复杂的字母数字组合以提高密码强度，不要用生日等容易被别人猜中的密码；<br>（3）如果您使用了密码找回功能，在修改密码成功后，请您及时删除我们发送给您的找回密码的短信；<br>（4）请记住不要与任何人共享您的密码。如果您已经与他人共享了密码，我们强烈建议您尽快更改密码；<br>（5）您可能在不经意间使您的计算机受到病毒、木马、间谍软件和广告软件的攻击，这些软件也可能记录并盗走您的密码！所以，请您安装并使用正规的杀毒软件。</p>
+						</li>
+						<li>
+							<p id="index-4" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">如何修改我的账户信息？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">您可以进入“个人中心”，在“个人设置”栏点击“修改个人信息”，就能进行个人信息的修改。如果您是借款人，在您的借款申请正在被微金所信审团队审核时，为风险管理安全起见，您不能更改个人信息。</p>
+						</li>
+						<li>
+							<p id="index-4" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">资金在银联方是如何监管的？怎样能证明微金所平台“不动钱”？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">无论是充值、满标付款还是其他关于资金的操作，投资人和借款人的资金都一直在上海银联的监管账户中。微金所提供给银联相关部门的投标信息和提现信息，银联方核查后将对账户资金做出相应操作，微金所无权自行操控资金流向。</p>
+						</li>
+						<li>
+							<p id="index-4" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">风险拨备金的资金来源有哪些？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">微金所风险拨备金主要包括如下几个部分：<br>第一部分：根据每个项目风险等级的不同，要求信贷服务商提供交易额的2%-17%作为风险保证金。<br>第二部分：公司每年根据总交易额及收益情况，拨出一定比例的收益作为风险拨备金。<br>第三部分：公司在有新的资本进入的时候会拨出一部分进入风险拨备金。<br>目前风险拨备金的资金足够覆盖可能出现的逾期风险。</p>
+						</li>
+						<li>
+							<p id="index-4" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">微金所有几层安全保障？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">微金所创建八层保障机制：<br>1.机构保障； 2.担保与回购保障；3.风险拨备金保障；4.保险保障；5.支付保障；6.融资保障；7.征信保障；8.合同保障。<br>除此之外，微金所还拥有网络技术安全保障，而您在微金所平台上进行投融资活动亦受到我国法律法规的安全保护。在微金所，您完全可以安心理财投资。有关安全保障的相关内容，详情请见微金所官网的“安全保障”一栏。</p>
+						</li>
+						<li>
+							<p id="index-4" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">我应该如何减少投资风险？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">除了信贷服务商的“本息担保”及微金所与合作机构的双重审核外，微金所的平台机制同样可以起到分散风险的作用。微金所建立在风险分散、小额多笔的理念上，通过引入信贷服务商作为贷款人的直接管理者，获得更专业的风险控制手段，通过严格准入信贷服务商，再次加强风险把控力度，保证投资人的本息安全。我们鼓励投资人“不把鸡蛋放在一个篮子里”，尽可能通过多笔投资分散风险。您可以通过降低每笔投资的金额来增加投资项目笔数。</p>
+						</li>
+						<li>
+							<p id="index-4" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">“人寿保”是什么？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">项目上标记“人寿保”，表示该项目借款人已投保中国人寿财险提供的小微借款人意外险。<br>借款人购买该保险产品后，人寿保险对交易的资产进行承保，当借款人出现合同中规定的意外伤害身故或全残不能进行还款时，人寿保险对该标的投资人先行垫付剩余应还本金的资金本息，以不超过借款本金总额为限，因信贷资产还款类型多样，先行垫付规则举例如下：<br>1) 对于月付息到期还本产品的资金垫付：<br>若标的借款期限为12个月，借款金额100万元，应还利息12万元，借款人正常还款两次，已还回利息为2万元。如此时借款人出现满足人寿保险垫资条件的还款困难，人寿保险理赔本金100万元至投资人账户，10万元的剩余应还利息，不在人寿保险的垫资范围内。<br>2) 对于等额本息产品的资金垫付：<br>若标的借款期限为5个月，借款金额100万元，应还利息10万元，每月等额本息还款22万元，借款人正常还款两次，已还回本息为44万元。如此时借款人出现满足人寿保险垫资条件的还款困难，人寿保险理赔本金66万元（110-44）至投资人账户。<br>3) 对于利随本清产品的资金垫付：<br>若标的借款期限为6个月，借款金额100万元，应还利息10万元，借款人在标的到期日之前出现满足人寿保险垫资条件的还款困难，人寿保险理赔本金100万元至投资人账户，应还利息10万元不在人寿保险的垫资范围内。</p>
+						</li>
+						<li>
+							<p id="index-4" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">微金所对项目标的借款人的审核步骤</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">所有由微金所挂牌的借款项目均经过签约优质信贷服务机构及微金所的双重审核。<br>信贷服务机构的初审包括录入、鉴别、审核借款客户的基本信息、征信报告、联系人信息、工作信息、银行流水、实地验证和财产信息等核心信用信息。信贷服务机构根据自身信审规则及经验给予借款客户授信，确定借款额度。<br>&nbsp; &nbsp;初审之后，信贷服务机构将所推荐的借款客户的所有资料上传至微金所平台，进行信息复核。微金所经验丰富的审核团队会通过电话联系借款人，对借款人的个人信息进行快速核对，并对该借款项目进行信用评级，决定是否上传微金所平台。</p>
+						</li>
+						<li>
+							<p id="index-4" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy"> 《2015年微金所信贷服务机构年度评级》信息披露的力度如何？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">
+								1.此次微金所开诚布公，除了关于系统、模型、后台运算方法等纯粹的内部研发信息之外，把真实的信贷服务机构和项目信息公开地展示出来，是力度极大的一次信息公开。<br> 2.通过此次评级，投资者可以看到微金所真正合作的全国各地的信贷服务机构，更大程度地了解微金所每个债权项目运作的真实性。
+								<br> 3.如果是资金池、或是自融的平台，是绝计无法披露这些信息的。这是我们顶了极大的压力，来履行我们的“网络借贷信息平台”的责任和义务。
+							</p>
+						</li>
+						<li>
+							<p id="index-4" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy"> 《2015年微金所信贷服务机构年度评级》报告评级依据？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">
+								此次评级由微金所委托专业的第三方信用评级公司——中微信用，首次对微金所有合作的信贷服务机构进行评级，区分各信贷服务机构的信用能力。<br> 中微信用依据长期积累的小微企业基础数据库、接入信用信息数据库、微金所平台交易数据，从资金真实投向、资产质量、资产交易能力、资产安全性等多个维度作为评级基础要素，力图真实评价民间信贷机构的业务能力、风险水平、诚信度，揭示其真实诚信和信用状况。
+							</p>
+						</li>
+						<li>
+							<p id="index-4" class="question_list_ds no-top-border"><span class="icon-squre-plus icon"></span><span class="question_wxbwhy">《2015年微金所信贷服务机构年度评级》与信贷服务机构准入星级评定有何差异？</span></p>
+						</li>
+						<li>
+							<p class="question_list_answer">
+								1.意义不同中微信用此次首次发布信贷服务商评级报告，不同于以往评级结果只对投资人判断信贷服务机构信用能力提供参考、而对投资不构成任何建议，而是旨在为微金所个人投资人或机构投资人的投资行为提供重要的依据。<br> 2.评级技术进步和创新，展示公开透明评级技术不断的进步和创新，既保留了以前评级技术的精髓，也随着经验、数据积累不断完善。而且以前没有这样集中公布和展示，这次集中展示。
+								<br> 3.展示区别除了星级变化，还对信贷服务商的类别做出划分，比如四星级和五星级都可以归类为A级，属于投资风险很低的类别，另外还有投资建议）另外，星级的含义也比以往更加细化，以前没有半星级，这次加了半星。
+							</p>
+						</li>
+					</ul>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</div>
+ <!-- 合作伙伴 -->
+	<section id="hzhb" class="hidden-sm hidden-xs">
+		<div class="container text-center">	
+			<h3>合作伙伴</h3>
+			<ul class="center-block hz-pad">
+				<li><a href="#"><i class="icon-uniE930"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92F"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92A"></i></a></li>
+				<li><a href="#"><i class="icon-uniE929"></i></a></li>
+				<li><a href="#"><i class="icon-uniE931"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92C"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92B"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92D"></i></a></li>
+				<li><a href="#"><i class="icon-uniE930"></i></a></li>
+			</ul>	
+		</div>
+		
+	</section>
+  	<!-- /合作伙伴 -->
+ 	<!-- 脚注区域 -->
+ 	<footer></footer>
+ 	<!-- /脚注区域 -->
+ 	
+	<!--模态框放置在下面-->
+	<!-- Modal -->
+	<div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="login_form_title">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="login_form_title">登录</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form class="form-horizontal"><!--横向：horizontal-->
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+			    <div class="col-sm-10">
+			      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control input-lg" id="inputPassword3" placeholder="请输入密码">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <div class="checkbox">
+			        <label>
+			          <input type="checkbox">记住密码
+			        </label>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-default">登录</button>
+			    </div>
+			  </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	        <button type="button" class="btn btn-primary">保存</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+ 	
+ 	<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="login_form_title">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="login_form_title">注册</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form class="form-horizontal"><!--横向：horizontal-->
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+			    <div class="col-sm-10">
+			      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control input-lg" id="inputPassword3" placeholder="请输入密码">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <div class="checkbox">
+			        <label>
+			          <input type="checkbox">记住密码
+			        </label>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-default">注册</button>
+			    </div>
+			  </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	        <button type="button" class="btn btn-primary">保存</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+ 	
+ 	<script src="lib/jquery/jquery.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+  	<script src="js/main.js"></script>
+	
+</body>
+</html>
+<script>
+    $(".gb-right").on("click",".question_list_ds",function () {
+        $(this).parent().next().find(".question_list_answer").slideToggle();
+        $(this).find(".icon").toggleClass("icon-squre-minus");
+    });
+
+    var hash = window.location.hash;
+    $(hash).trigger("click");
+
+    $(".quest-tab").on("click","span",function() {
+        var tar = $(this).attr("tar");
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".account").hide();
+        $("#"+tar).show();
+    });
+    $("#d").addClass("active");
+
+    function gh(){
+        if((window.location.href).indexOf("#cgAccount") > -1){
+            $(".quest-tab span:nth-child(1)").removeClass("active");
+            $(".quest-tab span:nth-child(2)").addClass("active");
+            $("#account").hide();
+            $("#cg-account").show();
+        }
+    }
+    gh();
+
+
+
+</script>

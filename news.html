@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>移动端开发-bootstrap</title>
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/news.css" />
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+  	  <script src="lib/html5shiv/html5shiv.min.js"></script>
+  	  <script src="lib/respond/respond.min.js"></script>
+  	<![endif]-->
+	</head>
+
+	<body>
+		<!--头部内容-->
+		<header id="header">
+			<div class="topbar hidden-sm hidden-xs">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2 text-center">
+							<a href="#" class="mobile-link">
+								<i class="glyphicon glyphicon-phone"></i>
+								<span id="">微信品台</span>
+								<i class="glyphicon glyphicon-menu-down"></i>
+								<!--<img src="img/c_06.jpg"/ alt="微信">-->
+							</a>
+						</div>
+						<div class="col-md-5 text-center">
+							<i class="glyphicon glyphicon-phone-alt"></i>
+							<sapn>4006-89-4006（服务时间：9:00-21:00）</sapn>
+						</div>
+						<div class="col-md-2 text-center">
+							<a href="">常见问题</a>
+							<a href="">财富登录</a>
+						</div>
+						<div class="col-md-3 text-center">
+							<a href="" class="btn btn-itcast btn-sm" data-toggle="modal" data-target="#register">免费注册</a>
+							<a href="" class="btn btn-link btn-sm" data-toggle="modal" data-target="#login_form">登录</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navbar navbar-itcast navbar-static-top" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+						<a class="navbar-brand" href="#">
+							<i class="icon-icon"></i>
+							<i class="icon-logo"></i>
+						</a>
+					</div>
+					<div id="nav_list" class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="index.html">投资首页</a>
+							</li>
+							<li>
+								<a href="xszq.html">新手专区</a>
+							</li>
+							<li>
+								<a href="aqbz.html">安全保障</a>
+							</li>
+							<li class="active">
+								<a href="news.html">新闻公告</a>
+							</li>
+							<li>
+								<a href="aboutwe.html">关于我们</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right hidden-sm">
+							<li>
+								<a href="#">个人中心</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="news-bg bs-example-tabs" data-example-id="togglable-tabs">
+			<div class="news-box">
+				<div class="news-left">
+					
+					<ul id="new-tabs" class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#newsDetail" id="newsDetail-tab" role="tab" data-toggle="tab" aria-controls="newsDetail" aria-expanded="false">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">全部新闻</font>
+								</font>
+							</a>
+						</li>
+						<li role="presentation" class="">
+							<a href="#newsMedia" role="tab" id="newsMedia-tab" data-toggle="tab" aria-controls="newsMedia" aria-expanded="true">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">媒体报道</font>
+								</font>
+							</a>
+						</li>
+						<li role="presentation" class="">
+							<a href="#newsIndustry" role="tab" id="newsIndustry-tab" data-toggle="tab" aria-controls="newsIndustry" aria-expanded="true">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">媒体报道</font>
+								</font>
+							</a>
+						</li>
+						<li role="presentation" class="">
+							<a href="#newsEvaluate" role="tab" id="newsEvaluate-tab" data-toggle="tab" aria-controls="newsEvaluate" aria-expanded="true">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">媒体报道</font>
+								</font>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="news-right tab-content" id="myTabContent">
+					<div class="news-all">
+						<div role="tabpanel" class="tab-pane fade in active" id="newsDetail" aria-labelledby="newsDetail-tab">
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news01.html">【微还款】 2017年12月11日-2017年12月17日还款公告</a></dt>
+								<dd><small class="n-date">2017-12-18</small><br>
+									<p class="n-content"> 各位亲爱的微主： 2017年12月11日-2017年12月17日共456个项目还款， {本金总计}：￥55,362,640.65元， {利息总计}：￥722,156.31元 。 请投</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news01.html">【微还款】 2017年12月4日-2017年12月10日还款公告</a></dt>
+								<dd><small class="n-date">2017-12-11</small><br>
+									<p class="n-content"> 各位亲爱的微主： 2017年12月4日-2017年12月10日共400个项目还款， {本金总计}：￥56,375,831.55元， {利息总计}：￥866,120.23元 。 请投资</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news01.html">【微还款】 2017年11月27日-2017年12月3日还款公告</a></dt>
+								<dd><small class="n-date">2017-12-04</small><br>
+									<p class="n-content"> 各位亲爱的微主： 2017年11月27日-2017年12月3日共379个项目还款， {本金总计}：￥56,827,393.25元， {利息总计}：￥765,537.54元 。 请投资以上</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news01.html">【微还款】2017年11月20日-2017年11月26日还款公告</a></dt>
+								<dd><small class="n-date">2017-11-27</small><br>
+									<p class="n-content"> 各位亲爱的微主： 2017年11月20日-2017年11月26日共325个项目还款， {本金总计}：￥54,899,012.28元， {利息总计}：￥728,222.41元 。 请投资以</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news01.html">【环球网】金融梦·创业情 2017最佳财智人物范忠民</a></dt>
+								<dd><small class="n-date">2017-11-20</small><br>
+									<p class="n-content">【环球网】金融梦·创业情 2017最佳财智人物范忠民 2017年7月19日，第六届中国财经峰会于北京隆重举行。中国财经峰会是经济领域最具影响力的思想盛会之一，峰会由众多财经及大众媒体联袂打造，致力于汇</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news01.html">【微还款】2017年11月13日-2017年11月19日还款公告</a></dt>
+								<dd><small class="n-date">2017-11-20</small><br>
+									<p class="n-content"> 各位亲爱的微主： 2017年11月13日-2017年11月19日共394个项目还款， {本金总计}：￥56,796,461.15元， {利息总计}：￥1,016,480.63元 。 请投</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news01.html">【微还款】2017年11月6日-2017年11月12日还款公告</a></dt>
+								<dd><small class="n-date">2017-11-20</small><br>
+									<p class="n-content"> 各位亲爱的微主： 2017年11月6日-2017年11月12日共394个项目还款， {本金总计}：￥47,900,205.72元， {利息总计}：￥648,163.69元 。 请投资以上</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news01.html">【微还款】 2017年10月30日-2017年11月5日还款公告</a></dt>
+								<dd><small class="n-date">2017-11-06</small><br>
+									<p class="n-content"> 各位亲爱的微主： 2017年10月30日-2017年11月5日共355个项目还款， {本金总计}：￥47,979,353.15元， {利息总计}：￥770,206.41元 。 请投资</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news01.html">【微公告】2017年10月31日微金所平台系统升级维护公告</a></dt>
+								<dd><small class="n-date">2017-10-31</small><br>
+									<p class="n-content">亲爱的微金所会员： 微金所平台将于2017年10月31日22:00 - 10月31日24:00进行平台系统升级维护工作，维护期间网站和手机客户端将暂停访问，给您带来不便敬请谅解。 系统更新将为您带来</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news01.html">【微还款】2017年10月23日-2017年10月29日还款公告</a></dt>
+								<dd><small class="n-date">2017-10-30</small><br>
+									<p class="n-content"> 各位亲爱的微主： 2017年10月23日-2017年10月29日共191个项目还款， {本金总计}：￥53,474,447.68元， {利息总计}：￥863,159.44元 。 请投资以</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+						</div>
+
+						<div role="tabpanel" class="tab-pane fade" id="newsMedia" aria-labelledby="newsMedia-tab">
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news02.html">【环球网】金融梦·创业情 2017最佳财智人物范忠民</a></dt>
+								<dd><small class="n-date">2017-11-20</small><br>
+									<p class="n-content">【环球网】金融梦·创业情 2017最佳财智人物范忠民 2017年7月19日，第六届中国财经峰会于北京隆重举行。中国财经峰会是经济领域最具影响力的思想盛会之一，峰会由众多财经及大众媒体联袂打造，致力于汇</p>
+									<a class="n-more" href="news01.html" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/1142">【新浪网】互联网金融平台微金所实缴注册资本增至1亿元</a></dt>
+								<dd><small class="n-date">2017-09-19</small><br>
+									<p class="n-content">【新浪网】互联网金融平台微金所实缴注册资本增至1亿元2017年7月24日，互联网金融平台微金所在其官方微信公众号发布了“微金所注册资本增至1亿元 夯实资本 更上一层”的公告，正式宣布，微金所经工商部门</p>
+									<a class="n-more" href="/news/detail/1142" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/1133">【中华网】微金所荣膺2017互联网金融典范企业奖</a></dt>
+								<dd><small class="n-date">2017-08-23</small><br>
+									<p class="n-content">【中华网】微金所荣膺2017互联网金融典范企业奖 2017年7月20日，第六届中国财经峰会暨“光荣与梦想”致敬盛典在京举办。微金所受邀参与此次盛会，与行业领袖们共话互联网金融领域的发展机遇与挑战，并</p>
+									<a class="n-more" href="/news/detail/1133" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/1125">【网易新闻】微金所恭贺粤东西北首家民营银行-客商银行盛大开业！</a></dt>
+								<dd><small class="n-date">2017-07-24</small><br>
+									<p class="n-content">【网易新闻】微金所恭贺粤东西北首家民营银行-客商银行盛大开业！ 喜讯： 梅州客商银行股份有限公司经中国银行业监督管理委员会广东监管局批准，于2017年6月28日起正式对外营业。微金所股东宝新能</p>
+									<a class="n-more" href="/news/detail/1125" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/1124">【环球网】微金所董事长范忠民荣获2017第八届中美企业峰会“杰出贡献奖”</a></dt>
+								<dd><small class="n-date">2017-07-24</small><br>
+									<p class="n-content">【环球网】微金所董事长范忠民荣获2017第八届中美企业峰会“杰出贡献奖” 2017第八届中美企业峰会于4月30日在洛杉矶著名的千禧店水晶大厅举行。美国联邦众议员赵美心(Judy Chu)，前美国加州共</p>
+									<a class="n-more" href="/news/detail/1124" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/1100">【凤凰网】网贷之家：盘点哪些平台做到存管、ICP、风投？微金所成为18家之一</a></dt>
+								<dd><small class="n-date">2017-05-11</small><br>
+									<p class="n-content">【凤凰网】网贷之家：盘点哪些平台做到存管、ICP、风投？微金所成为18家之一 2月23日，银监会正式发布《网络借贷资金存管业务指引》，《指引》明确了网贷资金存管业务应遵循的基本规则和实施标准。透过《</p>
+									<a class="n-more" href="/news/detail/1100" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/1090">【证券之星】方正东亚·微金所信托计划2号成立</a></dt>
+								<dd><small class="n-date">2017-04-11</small><br>
+									<p class="n-content">《方正东亚·微金所信托计划2号成立》 2016年11月，方正东亚与微金所正式成立“金融产品投资信托计划”。2017年3月，继“信托计划1号”之后，方正东亚与微金所再次合作，成立“金融产品投资信托计划</p>
+									<a class="n-more" href="/news/detail/1090" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/1078">【网易新闻】微金所 客商银行联手互动，助力小微金融！</a></dt>
+								<dd><small class="n-date">2017-03-20</small><br>
+									<p class="n-content">《微金所 客商银行联手互动，助力小微金融！》 2016年7月，宝新能源（股票代码000690）入资微金所，成为微金所的股东之一。转眼，半年多过去了，微金所和宝新能源之间又产生了怎样的密切合作呢？ </p>
+									<a class="n-more" href="/news/detail/1078" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/1055">【新华网】微金所荣膺“2016互联网金融企业社会责任奖”</a></dt>
+								<dd><small class="n-date">2017-01-18</small><br>
+									<p class="n-content">【新华网】微金所荣膺“2016互联网金融企业社会责任奖” &nbsp; &nbsp; &nbsp; 2017年1月10日-11日，中国公益慈善领域最具影响力的年度盛事“第六届中国公益节暨向公益践行者致</p>
+									<a class="n-more" href="/news/detail/1055" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/1054">【证券之星】微金所胜诉“老赖”，网贷追偿案近日在京宣判</a></dt>
+								<dd><small class="n-date">2017-01-18</small><br>
+									<p class="n-content">【证券之星】微金所胜诉“老赖”，网贷追偿案近日在京宣判 近日，微金所起诉借款人李斌及其担保方一案在京宣判，借款人李斌未按合同约定如期偿还借款本金及最后一期利息，担保方亦未履行债权回购责任，微金所基于维</p>
+									<a class="n-more" href="/news/detail/1054" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+						</div>
+
+						<div role="tabpanel" class="tab-pane fade" id="newsIndustry" aria-labelledby="newsIndustry-tab">
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="news02.html">【微动态】《搜狐财经》《国际在线》等多家媒体报道：股权质押或成互联网金融资产端新走向</a></dt>
+								<dd><small class="n-date">2016-10-17</small><br>
+									<p class="n-content">2016年互联网金融真正进入监管元年，最严监管的强势落地让互联网金融行业加速进入洗牌期。“13条禁令”更缩小了平台的业务空间，使本不充裕的优质资产变的更加匮乏。在监管元年以及优质资产“资产荒”双重压力</p>
+									<a class="n-more" href="/news/detail/984" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/983">【微动态】微金所获知名投资机构“深创投”注资，A轮融资完美收官！</a></dt>
+								<dd><small class="n-date">2016-10-17</small><br>
+									<p class="n-content"> 2016年9月13日，微金所获国际知名投资机构---深圳市创新投资集团注资（简称：“深创投”）。至此，由海航资本投资领投，宝新能源、深创投、北大E9基金跟投的A轮3.2亿元人民币融资完美收官。&amp;nb</p>
+									<a class="n-more" href="/news/detail/983" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/982">【微动态】P2P能投吗？监管落地，安全性更高</a></dt>
+								<dd><small class="n-date">2016-10-17</small><br>
+									<p class="n-content">2015年是P2P行业的井喷之年，P2P行业以异军突起之势迅速抢占了互联网金融行业的一块重要版图，似一班疾驰开往融资春天的地铁。然而金融创新往往意味着对现有监管的规避，我们同样也看到P2P行业在发展道</p>
+									<a class="n-more" href="/news/detail/982" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/928">【财经头条网】微金所与前海航交所携手推出安全优质的理财产品—海航金宝！</a></dt>
+								<dd><small class="n-date">2016-07-27</small><br>
+									<p class="n-content">[ 财经头条网导读 ]&nbsp;继2016年初，老牌互联网金融平台微金所携手海航物流推出供应链金融产品“海航通宝”之后，微金所再次与海航集团旗下企业前海航交所进行合作。于2016年7月13日正式推出</p>
+									<a class="n-more" href="/news/detail/928" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/816">【微动态】微金所董事长范忠民应邀出席“中国高成长企业CEO峰会”</a></dt>
+								<dd><small class="n-date">2015-12-04</small><br>
+									<p class="n-content">&nbsp; &nbsp; &nbsp; 2015年12月2日，由清科集团主办的“第六届中国高成长企业CEO峰会暨中国最具投资价值企业50强评选活动”在北京柏悦酒店隆重举行。此次大会以“变”为主题，共</p>
+									<a class="n-more" href="/news/detail/816" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/815">【微动态】“微金融与民生大讲堂”全国巡讲之厦门站</a></dt>
+								<dd><small class="n-date">2015-12-04</small><br>
+									<p class="n-content">&nbsp; &nbsp; &nbsp; 11月29日上午，由互联网金融公司微金所策划承办、人民日报《民生周刊》主办的“微金融与民生大讲堂”厦门巡讲活动在厦门国际会展中心开讲。人民日报《民生周刊》副总</p>
+									<a class="n-more" href="/news/detail/815" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/814">【微动态】王石，范忠民一行企业家哀牢山拜访褚时健</a></dt>
+								<dd><small class="n-date">2015-12-04</small><br>
+									<p class="n-content">&nbsp; &nbsp; &nbsp;11月17日微金所董事长范忠民、万科董事长王石等企业家一同前往哀牢山拜访褚时健先生。 &nbsp; &nbsp; &nbsp;&nbsp;17日晚上，一场以分</p>
+									<a class="n-more" href="/news/detail/814" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/671">【微关注】微金所范忠民：《指导意见》的“三大鼓励，八项注意”</a></dt>
+								<dd><small class="n-date">2015-07-22</small><br>
+									<p class="n-content">&nbsp; &nbsp; &nbsp; &nbsp;7月18日，由央行牵头制定的《关于促进互联网金融健康发展的指导意见》正式发布，拉开了互联网金融监管的序幕。从业者和相关媒体纷纷进行了解读和分析，微</p>
+									<a class="n-more" href="/news/detail/671" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/310">【微关注】人大教授：未来每个人都是银行</a></dt>
+								<dd><small class="n-date">2014-10-29</small><br>
+									<p class="n-content">　　“随着互联网金融的发展，金融服务将会越来越生活化。未来每个人都是一个银行，可以通过网贷将钱随时贷出去；或通过余额宝等把钱存过去，而不用太依赖大的金融机构”，中国人民大学汉青经济与金融学院副院长汤珂</p>
+									<a class="n-more" href="/news/detail/310" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+							<dl class="n-dl"><dt class="n-title"><a target="_blank" href="/news/detail/300">【微关注】政策动态：P2P监管划归草案已上报国务院</a></dt>
+								<dd><small class="n-date">2014-10-22</small><br>
+									<p class="n-content">　　10月20日，央行支付清算协会一名官员在公开场合透露，P2P归银监会管，第三方支付由央行管，这种默认的监管方式将会通过成文的规定出台。“这个文件已经报到国务院了，在走程序。”在他看来，应该正确看待</p>
+									<a class="n-more" href="/news/detail/300" target="_blank">Read more →</a>
+								</dd>
+							</dl>
+						</div>
+
+						<div role="tabpanel" class="tab-pane fade" id="newsEvaluate" aria-labelledby="newsEvaluate-tab">
+							<ul id="rate-report">
+								<li style="list-style:none;">
+									<a href="/news/evaluate" target="_blank">
+										<h4 class="h4" style="color: #000;">【微公告】微金所发布年度机构信用评级</h4></a>
+									<p class="h5 fots line">2016-02-22</p>
+									<p class="h4" style="color: #6F6F6F; font-size:15px;">&nbsp; &nbsp; &nbsp; &nbsp;根据国家有关互联网金融主管部门颁发的《关于促进互联网金融健康发展的指导意见》、《网络借贷信息中介机构业务活动管理暂行办法》等系列行业规范，进一步明确了互联网金融平台的“信息中介”地位，负有“信息披露、风险提示”的责任和义务，全面披露“借款人、担保人的信用风险、信用评级”。</p>
+									<p class="h5 line">
+										<a target="_blank" href="/news/evaluate.html" style="color: #c2502e;">Read more →</a>
+									</p>
+								</li>
+								<li style="list-style:none;">
+									<a href="/resource/protocol/explain.html" target="_blank">
+										<h4 class="h4" style="color: #000;">【微公告】评级术语释义</h4></a>
+									<p class="h5 fots line">2016-03-12</p>
+									<p class="h4" style="color: #6F6F6F; font-size:15px;">&nbsp; &nbsp; &nbsp; &nbsp;微金所持续推进交易所模式，产品星级是上架资产风险定价的核心要素。现将星级含义及其投资提示公开展示，希望广大投资者时刻把握投资风险。</p>
+									<p class="h5 line">
+										<a target="_blank" href="/news/explain.html" style="color: #c2502e;">Read more →</a>
+									</p>
+								</li>
+								<li style="list-style:none;">
+									<a href="/news/advancePay" target="_blank">
+										<h4 class="h4" style="color: #000;">【微公告】关于车帮主及金房宝产品提前还款的说明</h4></a>
+									<p class="h5 fots line">2016-05-18</p>
+									<p class="h4" style="color: #6F6F6F; font-size:15px;">&nbsp; &nbsp; &nbsp; &nbsp;车帮主及金房宝产品是微金所平台针对借款人推出的优质短期借款项目，该借款一般用于临时资金周转，所以在借款人资金充裕时， 可能会出现借款人提前还款的情况。</p>
+									<p class="h5 line">
+										<a target="_blank" href="/news/advancePay.html" style="color: #c2502e;">Read more →</a>
+									</p>
+								</li>
+							</ul>
+						</div>
+						<div role="tabpanel" class="page" style="display: block;">
+							<div style="clear:both;"></div>
+							<ul class="pagination">
+								<li p="0" class="pagprev">
+									<a href="javascript:void(0);"><i class="icon-previous"></i></a>
+								</li>
+								<li p="1" class="active">
+									<a href="javascript:void(0);">1</a>
+								</li>
+								<li p="2" class="">
+									<a href="javascript:void(0);">2</a>
+								</li>
+								<li p="3" class="">
+									<a href="javascript:void(0);">3</a>
+								</li>
+								<li p="4" class="">
+									<a href="javascript:void(0);">4</a>
+								</li>
+								<li p="5" class="">
+									<a href="javascript:void(0);">5</a>
+								</li>
+								<li><span>...</span></li>
+								<li p="104" class="">
+									<a href="javascript:void(0);">104</a>
+								</li>
+								<li p="2" class="pagnext">
+									<a href="javascript:void(0);"><i class="icon-next"></i></a>
+								</li>
+								<li class="paginfo">跳转到：<input class="search_input" type="text" size="4"> </li>
+								<li>
+									<a class="search_but"><i class="icon-rightArrow"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="lib/jquery/jquery.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.js"></script>
+		<script src="js/main.js"></script>
+		<script type="text/javascript">
+			$('#nav-tabs a').click(function (e) {
+			  e.preventDefault()
+			  $(this).tab('show')
+			})
+		</script>
+	</body>
+
+</html>

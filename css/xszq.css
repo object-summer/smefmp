@@ -1,0 +1,425 @@
+/*guide-banner部分
+.banner-guide {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.banner-guide img {
+	width: 100%;
+}
+*/
+.img-guide1 {
+	width: 100%
+}
+
+.guide-bg {
+	background: #f3f3f3;
+	padding: 15px 0
+}
+
+.guide-box {
+	background: #f3f3f3;
+	border: 1px #e3e3e3 solid;
+	width: 1200px;
+	margin: 0 auto
+}
+
+.guide-box .gb-left {
+	float: left;
+	width: 18%
+}
+
+.guide-box .gb-left ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.guide-box .gb-left ul li {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	color: #333;
+	border: 1px #e3e3e3 solid;
+	text-align: center;
+	background: #f8f8f8;
+	border-left: none;
+	border-top: none
+}
+
+.guide-box .gb-left ul li a {
+	display: block
+}
+
+.guide-box .gb-left ul .active,
+.guide-box .gb-left ul li:hover {
+	background: #fff;
+	width: 101%;
+	display: block;
+	position: relative;
+	left: -3px;
+	border-left: 3px #dd2c37 solid;
+	cursor: pointer;
+	height: 50px;
+	border-right: none
+}
+
+.guide-box .gb-right {
+	background: #fff;
+	display: table;
+	padding: 25px;
+	font-size: 14px
+}
+
+.guide-box .gb-right .img-guide2 {
+	float: left;
+	max-width: 190px;
+	width: 80%;
+	border: 1px #e3e3e3 solid;
+	padding: 2px
+}
+
+.guide-box .gb-right .gb-title {
+	text-align: right
+}
+
+.guide-box .gb-right .gb-title dl {
+	padding: 0 0 0 40px;
+	float: left;
+	margin-top: 10px;
+	text-align: left
+}
+
+.guide-box .orange {
+	color: #ff9201
+}
+
+.guide-box .red {
+	color: #f00
+}
+
+.guide-box .point {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background: #dd2c37;
+	line-height: 8px;
+	margin-right: 10px
+}
+
+.guide-box .gb-right .gb-title dl dt {
+	font-size: 20px;
+	padding: 0 0 6px 13px
+}
+
+.guide-box .gb-right h2 {
+	padding: 35px 0 15px 0;
+	font-size: 22px;
+	font-weight: normal
+}
+
+.guide-box .gb-right .gb-title dl dd {
+	font-size: 14px;
+	line-height: 28px;
+	border-bottom: 1px #ccc dashed;
+	margin: 0;
+	padding: 8px 15px;
+	letter-spacing: 2px
+}
+
+.guide-box .gb-right .gb-title .img-guide3 {
+	max-width: 155px;
+	width: 100%;
+	padding-top: 20px
+}
+
+.guide-box .line-height32 {
+	line-height: 32px
+}
+
+.guide-box .gb-right .gb-ul {
+	padding: 0
+}
+
+.guide-box .gb-right .gb-ul li {
+	line-height: 32px
+}
+
+.guide-box .gb-right .gb-ul .li_top {
+	padding-top: 10px
+}
+
+.guide-box .gb-right h2 .gb-span {
+	font-size: 14px;
+	color: #666
+}
+
+.guide-box .gb-right .table-box {
+	width: 100%;
+	border: 1px #c6cbcf solid;
+	font-size: 14px
+}
+
+.guide-box .gb-right .table-box tr td,
+.guide-box .gb-right .table-box tr th {
+	border-right: 1px #e0e3e5 solid;
+	padding: 13px 10px;
+	color: #666;
+	line-height: 26px
+}
+
+.guide-box .gb-right .table-box tr td:nth-child(2) {
+	background: url("/resource/web/img/guide/g-icon1.png") right center no-repeat;
+	background-position-x: 96%;
+	padding-right: 50px
+}
+
+.guide-box .gb-right .table-box tr td:nth-child(3) {
+	background: url("/resource/web/img/guide/g-icon2.png") right center no-repeat;
+	background-position-x: 94%
+}
+
+.guide-box .gb-right .table-box tr:nth-child(odd) {
+	background: #f2f2f2
+}
+
+.guide-box .gb-right .table-box tr:nth-child(even) {
+	background: #fdfdfd
+}
+
+.guide-box .gb-right .table-box tr th {
+	text-align: center
+}
+
+.guide-box .gb-right .table-box tr td:nth-child(4) {
+	border-right: none
+}
+
+.guide-box .gb-right .img-guide4 {
+	text-align: center;
+	padding: 20px 0 50px 0
+}
+
+.guide-box .gb-right .img-guide4 img {
+	max-width: 500px;
+	width: 100%
+}
+
+.invest-vip .iv1 {
+	border-bottom: 1px #ccc solid;
+	height: 150px
+}
+
+.invest-vip .iv1 .vip-cont {
+	padding-top: 20px
+}
+
+.invest-vip .iv1 .vip-img1 {
+	float: left;
+	padding-right: 25px
+}
+
+.invest-vip .h3 {
+	color: #333;
+	font-size: 20px;
+	text-align: center;
+	padding: 40px 0 25px 0
+}
+
+.invest-vip .iv1 .h3 {
+	text-align: left;
+	padding: 30px 0 20px 0
+}
+
+.invest-vip .iv-text,
+.invest-vip .p {
+	color: #666;
+	font-size: 14px;
+	line-height: 28px
+}
+
+.invest-vip .iv2 {
+	float: left;
+	width: 30%;
+	text-align: center
+}
+
+.invest-vip .iv2 img {
+	width: 100px
+}
+
+.invest-vip .dl-mar {
+	margin: 0 40px
+}
+
+.invest-vip .iv2 .iv-text {
+	text-align: left
+}
+
+.invest-vip .iv2 .b {
+	font-size: 15px;
+	padding: 10px 0;
+	display: inline-block;
+	font-weight: bold;
+	color: #333
+}
+
+.iv-table {
+	clear: both;
+	padding-bottom: 50px;
+	margin-bottom: 45px;
+	border-bottom: 1px #ccc solid
+}
+
+.iv-table table {
+	border: 1px #d8e5ed solid;
+	margin: 20px 0
+}
+
+.iv-table table tr td {
+	border-right: 1px #d8e5ed solid;
+	border-bottom: 1px #d8e5ed solid;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px
+}
+
+.iv-table table tr:nth-child(1),
+.iv-table table tr td:nth-child(1),
+.iv-table table .tr-last {
+	background: #f0f9ff
+}
+
+.iv-table table tr .nor-border {
+	border-right: none
+}
+
+.iv-table table tr .nob-border {
+	border-bottom: none
+}
+
+.invest-vip .iv3 {
+	border: none
+}
+
+.invest-vip .iv3 .h3 {
+	padding-top: 20px
+}
+
+.invest-vip .vip_1 {
+	float: left;
+	padding-right: 20px;
+	width: 140px
+}
+
+.invest-vip .iv1 p .iv-text {
+	display: table;
+	padding-top: 10px
+}
+
+.og-box {
+	width: 982px
+}
+
+.operate-box .buttonS {
+	line-height: 35px;
+	background: #e43737;
+	color: #fff;
+	border-radius: 3px;
+	border: none;
+	height: 35px;
+	display: inline-block;
+	width: 160px;
+	font-size: 16px;
+	text-align: center
+}
+
+.operate-box .buttonS:hover {
+	color: #fff
+}
+
+.operate-box .ng_border {
+	border-bottom: 1px #cbd0d3 solid
+}
+
+.operate-box .ng_box1 {
+	background: url("..//img/ng1.jpg") 77% center no-repeat;
+	background-size: 38%;
+}
+
+.operate-box .ng_box1 dl dt {
+	background: url("../img/ng01.jpg") left center no-repeat;
+	padding: 5px 0 0 35px;
+	background-size: 20px
+}
+
+.operate-box .ng_box2 {
+	background: url("../img/ng2.jpg") 50px 18% no-repeat;
+	margin: 40px 0 20px 0;
+	background-size: 45%
+}
+
+.operate-box .ng_box2 dl dt {
+	background: url("../img/ng02.jpg") right center no-repeat;
+	padding: 5px 42px 0 45px;
+	background-position-x: 83.2%;
+	background-size: 23px
+}
+
+.operate-box .ng_box3 {
+	background: url("../img/ng3.jpg") 71% center no-repeat;
+	background-size: 53%;
+	margin-top: 40px;
+	padding-left: 60px
+}
+
+.operate-box .ng_box3 dl dt {
+	background: url("../img/ng03.jpg") left center no-repeat;
+	padding: 5px 0 0 35px;
+	background-size: 23px
+}
+
+.operate-box .ng_box4 {
+	background: url("../img/ng4.jpg") 50px 20% no-repeat;
+	margin: 50px 0;
+	background-size: 50%
+}
+
+.operate-box .ng_box4 dl dt {
+	background: url("../img/ng04.jpg") right center no-repeat;
+	padding: 5px 92px 0 35px;
+	background-position-x: 81.5%;
+	background-size: 23px
+}
+
+.operate-box .ngb {
+	padding: 90px 55px
+}
+
+.operate-box .ngb dl {
+	color: #5e5e5e;
+	margin-bottom: 10px
+}
+
+.operate-box .ngb dl dt {
+	line-height: 45px;
+	font-size: 20px
+}
+
+.operate-box .ngb dl dd {
+	font-size: 16px;
+	line-height: 26px
+}
+
+.operate-box .padding98 {
+	padding-right: 80px
+}
+
+.operate-box .ng_box4 .buttonS {
+	width: 175px
+}
+
+.operate-box .text-right {
+	text-align: right
+}

@@ -1,0 +1,44 @@
+//这是一个测试less的文件，其支持完全标准的css，css一样生效
+//less:减少一门CSS预处理语言减少一门CSS预处理语言，它扩展了CSS语言，增加了变量，Mixin，函数等特性，使CSS更易维护和扩展。
+
+//lesslimian的定义变量@
+@mainColor：#e92322;
+
+body {
+    background-color: @mainColor;
+}
+.container {
+    width: 100%;
+    background-color: #ff0;
+    
+    .row {
+        height: 200px;
+        
+        div {
+            border-left:1px solid @mainColor ;   
+            
+            a {
+                color: red;
+                
+                a:hover {
+                color: red;
+                }
+            }
+            
+        }
+    }
+}
+    //Mixin
+//定义一个类，（）括号里面为公共参数：
+.roundedCorners(@radius: 5px) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+/* 定义的类应用到另个一个类中 */
+＃header {
+  .roundedCorners;
+}
+#footer {
+  .roundedCorners(10px);
+}

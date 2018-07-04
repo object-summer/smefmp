@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>移动端开发-bootstrap</title>
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/xszq.css" />
+		<!--[if lt IE 9]>
+  	  <script src="lib/html5shiv/html5shiv.min.js"></script>
+  	  <script src="lib/respond/respond.min.js"></script>
+  	<![endif]-->
+		<style>
+			.guide-box .gb-right {
+				width: 82%;
+				padding: 0 25px 25px;
+			}
+			
+			.question_list_tittle {
+				font-size: 20px;
+				padding: 20px 0;
+				display: inline-block;
+			}
+			
+			.question_list_ds {
+				padding: 8px 0;
+				cursor: pointer;
+				line-height: 35px;
+				border: 1px solid #CDD0D5;
+				margin-bottom: 0;
+			}
+			
+			.no-top-border {
+				border-top: none;
+			}
+			
+			.question_list_ds .icon {
+				font-size: 18px;
+				color: #919191;
+				position: relative;
+				top: 2.5px;
+				margin: 0 5px 0 10px;
+			}
+			
+			.question_list_answer {
+				padding: 15px 0 15px 40px;
+				line-height: 30px;
+				color: #9A9A9A;
+				display: none;
+				border: 1px solid #CDD0D5;
+				border-top: none;
+				background-color: #FCFCFC;
+			}
+			
+			.cg-account .blue {
+				color: #009eff;
+			}
+			
+			.cg-account .quest-table,
+			.cg-account .tCard,
+			.cg-account .tBank {
+				width: 96%;
+				border-top: 1px #ccc solid;
+				border-left: 1px #ccc solid;
+				margin: 10px 0;
+			}
+			
+			.cg-account .quest-table tr td,
+			.cg-account .quest-table tr th,
+			.cg-account .tCard tr td,
+			.cg-account .tCard tr th,
+			.cg-account .tBank tr td,
+			.cg-account .tBank tr th {
+				text-align: center;
+				border-bottom: 1px #ccc solid;
+				border-right: 1px #ccc solid;
+			}
+			
+			.cg-account .quest-table tr td,
+			.cg-account .quest-table tr th {
+				height: 30px;
+				line-height: 30px;
+			}
+			
+			.cg-account .quest-si {
+				float: left;
+				display: inline-block;
+				width: 75%;
+			}
+			
+			.cg-account .invest-code {
+				float: left;
+				display: inline-block;
+				width: 25%;
+			}
+			
+			.quest-tab {
+				color: #666;
+			}
+			
+			.quest-tab span {
+				display: inline-block;
+				height: 35px;
+				line-height: 35px;
+				padding: 0 30px;
+			}
+			
+			.quest-tab span:hover {
+				cursor: pointer;
+			}
+			
+			.quest-tab .active {
+				border-bottom: 1px #dd3137 solid;
+				color: #dd3137;
+			}
+			
+			.account-box .active {
+				display: inherit;
+			}
+			
+			.cg-account .tCard {}
+			
+			.cg-account .tCard tr td,
+			.cg-account .tCard tr th {
+				height: 45px;
+				line-height: 45px;
+			}
+			
+			.cg-account .tCard tr .bg-red {
+				background: #f8d6d7;
+			}
+			
+			.cg-account .tCard tr th,
+			.cg-account .tBank tr th {
+				background: #f2f2f2;
+			}
+			
+			.cg-account .tBank tr th,
+			.cg-account .tBank tr td {
+				padding: 10px 15px;
+			}
+			
+			.cg-account .tBank tr .text-red {
+				color: #dd3137;
+			}
+			
+			.cg-account .tBank tr td:nth-child(2) {
+				text-align: left;
+			}
+			
+			.cg-account .tBank tr th:nth-child(1),
+			.cg-account .tBank tr td:nth-child(1),
+			.cg-account .tBank tr th:nth-child(3),
+			.cg-account .tBank tr td:nth-child(3) {
+				width: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部内容-->
+		<header id="header">
+			<div class="topbar hidden-sm hidden-xs">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2 text-center">
+							<a href="#" class="mobile-link">
+								<i class="glyphicon glyphicon-phone"></i>
+								<span id="">微信品台</span>
+								<i class="glyphicon glyphicon-menu-down"></i>
+								<!--<img src="img/c_06.jpg"/ alt="微信">-->
+							</a>
+						</div>
+						<div class="col-md-5 text-center">
+							<i class="glyphicon glyphicon-phone-alt"></i>
+							<sapn>4006-89-4006（服务时间：9:00-21:00）</sapn>
+						</div>
+						<div class="col-md-2 text-center">
+							<a href="">常见问题</a>
+							<a href="">财富登录</a>
+						</div>
+						<div class="col-md-3 text-center">
+							<a href="" class="btn btn-itcast btn-sm" data-toggle="modal" data-target="#register">免费注册</a>
+							<a href="" class="btn btn-link btn-sm" data-toggle="modal" data-target="#login_form">登录</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navbar navbar-itcast navbar-static-top" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+		<div class="container">
+			 <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+				    <a class="navbar-brand" href="#">
+			          <i class="icon-icon"></i>
+			          <i class="icon-logo"></i>
+			        </a>
+			</div>
+			<div id="nav_list" class="collapse navbar-collapse">
+	          <ul class="nav navbar-nav">
+	             <li><a href="index.html">投资首页</a></li>
+	            <li class="active"><a href="xszq.html">新手专区</a></li>
+	            <li><a href="aqbz.html">安全保障</a></li>
+	            <li><a href="news.html">新闻公告</a></li>
+	            <li><a href="aboutwe.html">关于我们</a></li>
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right hidden-sm">
+	            <li><a href="#">个人中心</a></li>
+	          </ul>
+	        </div>
+		</div>
+	</div>
+		</header>
+		<img class="img-guide1" src="img/guide1.jpg">
+		<div class="guide-bg">
+			<div class="guide-box">
+				<div class="gb-left">
+					<ul>
+						<li id="a" class="active">
+						<a href="xszq.html">操作指南</a>
+						</li>
+						<li id="c">
+							<a href="viptzr.html">VIP投资人</a>
+						</li>
+						<li id="d">
+							<a href="cjwt.html">常见问题</a>
+						</li>
+						<li id="f">
+							<a href="cpjs.html">产品介绍</a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="gb-right">
+					<ul id="user" style="display: block;" class=" list-paddingleft-2">
+						<ul class=" list-paddingleft-2" style="list-style-type: square;">
+							<li>
+								<p class="question_list_tittle">微金宝</p>
+							</li>
+							<li>
+								<p class="question_list_ds">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">1.微金宝产品特点</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">微金宝有几个显著的特点，现介绍如下： a)此产品是一个智能投资工具，投资本产品后系统将自动匹配微金所信贷服务商推荐的借 款项目； b)此产品是为了满足偏好短期投资的用户设计的，一般为短期，如1个月、2个月； c)产品不分“期”，只要有额度，随时可以投资； d)投资后即开始计息，无需等待满标； e)投资后可在投资记录中查看到当前匹配的平台标的，展示其合同号。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">2.投资的时候显示还有额度，但是点投资却投不进去了？</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">因为微金宝比较抢手，其他投资人已经抢先投资成功了，请您稍等或者明天抢投。一般会在凌晨0:00刷新可投额度。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">3.投资成功后就开始计息了吗？</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">是的，例如投资1个月微金宝，到期日就是投资日后一个月。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">4.到期后资金会在什么时候回到可用余额里？</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">资金会在到期日当天回到可用余额（如节假日有特殊规定的除外）。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">5.我的资金被匹配到哪些资产上去了？</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">系统为您匹配的资产都是微金所信贷服务商推荐且全额本息担保的借款项目。</p>
+							</li>
+							<li>
+								<p class="question_list_tittle">本事宝</p>
+							</li>
+							<li>
+								<p class="question_list_ds">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">1.产品介绍</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">“本事宝”是由借款人发起的，最终投向消费借款的借款项目，以向急需资金的技能型蓝领提供消费借款的产品。此类人群均拥有特定领域的专业技能，比如司机、厨师、修理工等等，特定技能保证了该类人群具有稳定的收入来源和现金流，因而具备良好的偿付能力。本产品借款人数多，小额分散，总体风险可控。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">2.资产来源</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">“本事宝”所对应的资产为消费性借款，由微金所合作伙伴提供。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">3.产品模式</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">“本事宝”在平台上架采用收益权转让的模式。即由合作伙伴指定某个人向原借款人发放贷款然后该指定个人来微金所平台就已发放的贷款进行收益权转让，以借款人的身份在平台申请借款。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">4.借款利率</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">微金所平台的上架利率一般情况下介于11%-12%之间，随着市场变化而上下浮动。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">5.借款期限</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">1）此款消费性借款产品的期限介于1-24个月之间。2）因“本事宝”平台上架采用收益权转让模式，转让过程需要一定周期，所以第一个月不一定为整月，第一个月按天计息。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">6.还款方式</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">收益权转让人和平台投资人之间的结算的还款方式为月付息到期还本。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">7.常见问题</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">7.1原借款者和借款者是什么关系，借款者是否是原借款者其中之一，是否是代理上架？借款者是收益权转让人，由微金所合作伙伴指定代理人，不是原借款者之一。7.2为什么一开始就是五星级？合作伙伴星级由风控部门在其准入时根据专业评分制度进行评定，风险指数低。7.3为什么第一个不是整月，利息少于其他月？因“本事宝”平台上架采用收益权转让模式，转让过程需要一定周期，所以第一个月不一定为整月，第一个月按天计息。7.4由谁担保，出现风险微金所如何处置，微金所是否承担责任？1)本产品定价经过坏帐拨备精算的一款产品，收益可覆盖一定比例内的风险；且该产品小额分散，风险可控。2)本产品资产提供商为通过高标准严格筛选的优质提供商，从源头把控借款客户的信用状况，保证优质借款标的供应。3)“微金所”是民间资本的互联网微金融资产交易平台，为会员之间订立合同提供媒介及配套服务，平台上关于“微金所”会员或其发布的相关信息（包括但不限于姓名、 联系人及联络信息，资金的需求或供给描述和说明等）均由会员自行提供，会员应对其提供的信息承担全部责任。7.5为什么本事宝一期和二期公布的借款者照片是一样的？展示借款者照片是为了体现本事宝项目特点，从该产品的原借款人照片中随机选取，每期上架不会更换这批照片。7.6与泰康金融有没有关系，是与哪个公司合作的？与泰康金融[泰康金融官网已告知]没有关系，与其他合作伙伴合作。7.7如果也是消费性借款，与消费金融相比有什么不同，为什么不放在微消费栏目下？因两者采用的业务模式不同，本事宝采用收益权转让的业务模式，而微消费是直接对接原借款人。7.8还款是原借款者进行还款，还是借款者进行还款？由借款人及收益权转让人还款。7.9如果是原借款人还款，在不能正常按时还款的情况下，借款人承担什么责任？借款人是平台发起借款的直接借款人，所以借款人承担直接还款责任。7.10 收益权转让1)从产品角度：收益权转让：微金所平台常见的收益权转让标的为债权收益权。收益权转让人在放款给原借款人后，来平台发起借款申请，进行收益权转让。收益权转让后，借款人仍然将款项支付给转让人，再由转让人还款给平台投资人。所以在一定程度上转让人与投资人共担风险。原债权标的利息收益由收益权转让人和投资人共同分配。采用收益权转让形式发标的原因往往有很多种，包括借款人对放款时效性要求较高、转让人急需资金等。2)从法律角度：微金所平台的收益权转让：即原始债权的债权人/出借人（线上收益权出让人）在放款给原借款人、获得某一特定债权后，通过平台发起收益权出让申请，将其此一特定债权中的全部或部分收益权转让给线上投资人。收益权转让后，借款人按照原始《借款合同》的约定将款项支付给收益权出让人；收益权出让人按照线上《收益权转让协议》的约定还款给平台投资人。</p>
+							</li>
+							<li>
+								<p class="question_list_tittle">海航通宝</p>
+							</li>
+							<li>
+								<p class="question_list_ds">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">海航通宝</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">海航通宝是微金所平台推出的一款金融创新产品，是与海航物流集团有限公司共同打造的供应链金融产品，资产由机构融资人上海尚融供应链管理有限公司提供 ，经微金所风控中心审核通过后上标。尚融母公司海航物流集团有限公司做无限连带责任 担保，并出具《承诺担保函》，此担保具有不可撤销性。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">供应链金融</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">“供应链金融”是在供应链中寻找出一个大的核心企业，以核心企业为出发点，为供应链提供金融支持。一方面，将资金有效注入处于相对弱势的上下游配套中小企业，解决中小企业融资难和供应链失衡的问题；另一方面，将信用融入上下游企业的购销行为，增强其商业信用，促进中小企业与核心企业建立长期战略协同关系，提升供应链的竞争能力。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">产品要素</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">产品名称：海航通宝收益：年化7-8%，并随着融资期限和市场情况波动而调整期限：3个月和6个月期还款方式：利随本清和月付息到期还本安全保障：海航物流做连带责任担保，并出具《承诺担保函》信用等级：5星半</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">为什么安全</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">海航通宝由尚融母公司海航物流集团有限公司作为担保方，对本项目提供的不可撤销无限连带责任保证担保具有很强的增信作用。据大公国际资信评估有限公司《2015年非公开发行公司债权信用评级报告》（大公报D【2015】295号）对海航物流集团有限公司的公司债券信用等级为AA+，主体信用等级为AA-。反应了其建立了较好的供应链服务模式、冷链物流业务发展空间较大、资产负债率下降等优势。综合分析，海航物流集团有限公司偿还债务的能力很强，预计未来1到2年，随着募集资金的投入使用，公司业务规模将保持扩张，大公对海航物流的评级展望为稳定。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">投资范围</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">机构融资人上海尚融供应链管理有限公司的供应链应收账款融资。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">收益方式返还形式</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">每期产生的利息收益定期返还至投资人的微金所账户。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">计息规则是怎样、与 微投资、微小宝等项目计息有何区别</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">海航通宝的计息规则同微投资产品，工作日15点之前满标，当日计息， 工作日15点之后满标，下一个工作日计息。</p>
+							</li>
+
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">项目还款遇到节 假日如何还款及是否会提前还款</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">海航通宝遇到节假日如有需要还款可提前还款，具体以平台公告为主。</p>
+							</li>
+							<li>
+								<p class="question_list_tittle">月月盈</p>
+							</li>
+							<li>
+								<p class="question_list_ds">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">什么是月月盈</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">月月盈是为了更好地满足投资人对灵活期限产品的需求，同时方便投资人最大化效率利用自己的资金，特推出的收益率随投资时间递增的产品。月月盈能够令长期投资者自动获得较高收益，同时保持资金合理流动性。是一款兼顾收益和流动性的投资工具。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">产品模式</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">投资月月盈后即开始计息，且没有固定的到期日期。在客户需要结束投资时可以自主选择赎回，如果客户不主动赎回，则投资不会自动终止，直到达到最大投资期限自动赎回。随着客户投资后资金存留的时间增加，对应的收益率会持续攀升，客户赎回越迟，享受到的收益率就会越高。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">收益率</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">月月盈投资后即开始计息，收益率每半个月提升一次，达到上限后不再增长。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">月月盈付息规则</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">投资期间的收益在赎回时随同赎回本金一并回到平台月余额账户。若第一笔投资赎回部分本金，该部分本金在投资持续期间产生的收益会自动计算并随同本金一并在赎回日回到平台余额中，留存部分的收益率仍然随时间增加而持续攀升。再次投资月月盈则重新开始计息。每半月收益=当前本金×对应年化收益率÷12×0.5。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">赎回规则</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">客户每笔投资对应一个投资日，在投资日后满1个自然月、满1个自然月零15天、满2个自然月……的日期为赎回日。在每个赎回日之前2天（含）之前，可预约在该赎回日赎回。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">资产匹配</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">微金所平台微投资项目，投资成功后第二日可查看实际匹配到的借款人。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">赎回</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">
+									投资人通过个人中心-已投项目中月月盈的预约赎回页面，对单笔投资提交赎回申请（可赎回部分投资资金或全部资金），该部分本金和投资持续期间产生的收益即会在赎回日当天回到平台余额中
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">锁定期</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">投资人在一定期限内不能申请赎回已投资的资金，这一期限即为锁定期。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">投资举例</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">甲客户3月1日选择投资月月盈1000元，则其在3月16日-3月30日可预约4月1日（投资满1个自然月）赎回一定数额的投资（如500元），4月1日15点前赎回的本金连同其对应的收益部分会回到客户的可用余额之中。3月31日-4月14日可预约4月16日（投资满1个自然月零15天）赎回，4月15日-4月29日可预约5月1日（投资满2个自然月）赎回……以此类推，直至该笔投资全部停止。</p>
+							</li>
+							<li>
+								<p class="question_list_tittle">海航金宝</p>
+							</li>
+							<li>
+								<p class="question_list_ds">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">什么是海航金宝</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">海航金宝是前海航交所挂牌资产，其债权方是前海航交所准入的机构会员，会员将其已摘牌资产在微金所平台进行收益权转让。此产品由前海航交所的挂牌机构会员提供回购承诺，经前海航交所风控中心审核后挂牌，摘牌机构会员同时也是微金所准入的机构融资人之一，因经营或消费等短期的资金需求，将其债权中的全部或部分收益权通过平台转让给投资人。海航金宝资产经前海航交所和微金所的双重审核，并由前海航交所挂牌会员提供回购承诺，是一款安全、优质的理财产品。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">业务模式</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">经前海航交所准入的会员可根据转让公告及其投资意愿向航交所提交摘牌申请书，交易成功后获得此产品的收益权。获得此产品收益权的摘牌会员（同时是微金所的准入机构融资人之一）因资金周转，再将此产品提交至微金所，审核通过后于微金所平台上架交易。标的到期后由微金所机构融资人于微金所操作还款，并由航交所挂牌会员承担回购保证。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">产品要素</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">收益率：8.5%；期限：3个月；还款方式：利随本清；产品星级：5星；风险评级：极低风险；安全保障：回购承诺书
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">为什么安全</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">此产品先经前海航交所风控中心审核后挂牌，后经微金所审核后上架交易。经前海航交所和微金所的双重审核，并由前海航交所挂牌会员提供回购承诺，是一款安全、优质的理财产品。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">投资范围</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">机构融资人深圳释玺资本投资有限公司的经营业务，受托资产管理、投资管理和投资咨询服务等。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">收益方式返还形式</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">项目到期产生的利息收益连同本金一次性返还至投资人的微金所账户。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">计息规则</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">工作日15点之前满标，当日计息， 工作日15点之后满标，下一个工作日计息。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus icon"></span>
+									<span class="question_wxbwhy">还款遇节假日</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">还款时间如遇节假日则提前至放假之前的工作日还款。</p>
+							</li>
+							<li>
+								<p class="question_list_tittle">微优选</p>
+							</li>
+							<li>
+								<p class="question_list_ds">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">产品介绍</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">微优选是微金所为了方便投资人投资专门推出的集合投标功能，通过使用该功能，您可以一次性投资远大于单个项目可投金额的资金，既方便了投资人资金管理的需求，也达到了分散投资的目的。微优选根据投资人投资集合标的总金额及每个子标的的可投金额，自动帮助投资人依次完成投标，直至每个集合标的投资完成为止。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">项目组成</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">微优选项目由微金所合作的第三方推荐的优质个人小额消费、经营及车辆抵押贷款等资产组成。基于资产特点，其中个人小额消费集合标的发布量较大。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">收益率</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">微优选项目的利率在6%-12%之间，根据资产供应方资质及借款期限等风控因素的不同，利率不同。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">还款方式</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">微优选项目的还款方式有等额本息、月付息到期还本、利随本清等。还款方式由借款人自由选择，一般选择等额本息还款方式的借款人还款能力较强。对于投资人而言，等额本息的项目每月都有本金回款，大大增加了投资项目的安全性，同时您还可以将本金复投再次获得投资收益，因此也是非常值得投资人关注的一种还款方式。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">风控措施</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">
+									①小额分散<br> 微优选项目均由小额借款组成，借款人数量非常大，笔均借款金额为万元以下，地域分布在全国20多个省市，通过小额分散控制了借款人逾期的集中度风险。
+									<br> ②大数据评分
+									<br> 资产供应方基于多年的小微信贷技术研究，采用专业的信用评分模型，对借款人提供的、授权自第三方反馈的等多种数据信息进行多维度分析，对借款人的信用风险、欺诈风险等进行全面评估，直接过滤掉不符合信贷条件的借款人，排除高风险因素。
+									<br> ③专业风控团队
+									<br> 资产供应方的专业信审团队基于借款人的特定融资需求，对借款项目进行实地尽调，并对借款人提供数据信息进行交叉验证，以确保借款项目真实、合法，借款人有稳定、可靠的还款能力及还款来源，运用大数据评分及专业信审经验的结合最终完成风险管理及风险控制工作，为投资人的资金安全保驾护航。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">计息规则</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">
+									工作日：15点之前满标当天计息，15点之后满标下一工作日计息；<br> 节假日：满标后下一工作日计息。
+								</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">如遇节假日项目如何还款？</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">如遇节假日一般为提前还款，具体以平台公告为主。</p>
+							</li>
+							<li>
+								<p class="question_list_ds no-top-border">
+									<span class=" icon-squre-plus  icon"></span>
+									<span class="question_wxbwhy">是否可预约投标？是否支持转让？</span>
+								</p>
+							</li>
+							<li>
+								<p class="question_list_answer">目前都不支持。</p>
+							</li>
+
+						</ul>
+					</ul>
+				</div>
+			</div>
+		</div>
+	 <!-- 合作伙伴 -->
+	<section id="hzhb" class="hidden-sm hidden-xs">
+		<div class="container text-center">	
+			<h3>合作伙伴</h3>
+			<ul class="center-block hz-pad">
+				<li><a href="#"><i class="icon-uniE930"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92F"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92A"></i></a></li>
+				<li><a href="#"><i class="icon-uniE929"></i></a></li>
+				<li><a href="#"><i class="icon-uniE931"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92C"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92B"></i></a></li>
+				<li><a href="#"><i class="icon-uniE92D"></i></a></li>
+				<li><a href="#"><i class="icon-uniE930"></i></a></li>
+			</ul>	
+		</div>
+		
+	</section>
+  	<!-- /合作伙伴 -->
+ 	<!-- 脚注区域 -->
+ 	<footer></footer>
+ 	<!-- /脚注区域 -->
+ 	
+	<!--模态框放置在下面-->
+	<!-- Modal -->
+	<div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="login_form_title">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="login_form_title">登录</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form class="form-horizontal"><!--横向：horizontal-->
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+			    <div class="col-sm-10">
+			      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control input-lg" id="inputPassword3" placeholder="请输入密码">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <div class="checkbox">
+			        <label>
+			          <input type="checkbox">记住密码
+			        </label>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-default">登录</button>
+			    </div>
+			  </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	        <button type="button" class="btn btn-primary">保存</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+ 	
+ 	<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="login_form_title">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="login_form_title">注册</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form class="form-horizontal"><!--横向：horizontal-->
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+			    <div class="col-sm-10">
+			      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control input-lg" id="inputPassword3" placeholder="请输入密码">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <div class="checkbox">
+			        <label>
+			          <input type="checkbox">记住密码
+			        </label>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-default">注册</button>
+			    </div>
+			  </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	        <button type="button" class="btn btn-primary">保存</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+ 	
+ 	<script src="lib/jquery/jquery.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+  	<script src="js/main.js"></script>
+	
+</body>
+</html>
+<script>
+    $(".gb-right").on("click",".question_list_ds",function () {
+        $(this).parent().next().find(".question_list_answer").slideToggle();
+        $(this).find(".icon").toggleClass("icon-squre-minus");
+    });
+
+  $("#f").addClass("active");
+</script>

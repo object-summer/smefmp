@@ -1,0 +1,191 @@
+.img-safe1 {
+	width: 100%
+}
+
+.safe-box {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 30px 0
+}
+
+.safe-box2 .safe-pad15 {
+	padding: 15px 0
+}
+
+.safe-box1 {
+	padding: 20px 0
+}
+
+.safe-box1 .box-bg {
+	background: url("img/safe2.png") right center no-repeat;
+	background-size: 20%
+}
+
+.safe-box1 dl {
+	width: 75%
+}
+
+.safe-box1 dl dt {
+	padding-bottom: 15px
+}
+
+.safe-box1 dl dd {
+	color: #666;
+	line-height: 28px;
+	font-size: 14px
+}
+
+.safe-box1 i {
+	color: #fff;
+	font-style: italic;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #349fe7;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: top
+}
+
+.safe-box1 .blue {
+	color: #349fe7;
+	font-size: 18px
+}
+
+.safe-box1 .red {
+	color: #f34f54
+}
+
+.safe-box1 .b {
+	color: #333;
+	font-size: 16px
+}
+
+.safe-box2 {
+	background: #fafafa;
+	display: -webkit-box
+}
+
+.safe-box1 .box-bg2 {
+	background: url("img/safe4.png") right center no-repeat;
+	background-size: 20%
+}
+
+.safe-box1 .box-bg3 {
+	background: url("img/safe6.png") right center no-repeat;
+	background-size: 20%;
+	height: 240px
+}
+
+.safe-box1 .box-bg4 {
+	background: url("img/safe8.png") right center no-repeat;
+	background-size: 20%;
+	height: 240px
+}
+
+.safe-box .dl-title {
+	text-align: center
+}
+
+.safe-box .dl-title dt {
+	color: #f34f54;
+	font-size: 20px;
+	border-bottom: 1px #d3d3d3 solid;
+	width: 350px;
+	margin: 0 auto
+}
+
+.safe-box .dl-title dt span {
+	padding: 0 20px;
+	display: inline-block;
+	text-align: center;
+	background: #fff;
+	position: relative;
+	top: 1px;
+	height: 24px
+}
+
+.safe-box .dl-title dd {
+	color: #333;
+	font-size: 16px;
+	padding-top: 5px
+}
+
+.zc-list dl {
+	line-height: 30px
+}
+
+.zc-list dl dt {
+	color: #333;
+	font-size: 16px;
+	padding-top: 15px
+}
+
+.zc-list dl dd,
+.wl-list p {
+	color: #666;
+	font-size: 14px;
+	line-height: 30px
+}
+
+.zc-list .wl-box dl {
+	width: 310px;
+	border: 1px #e2e2e2 dashed;
+	padding: 0 20px 20px 20px;
+	float: left;
+	margin-bottom: 30px
+}
+
+.zc-list .wl-box dl dt {
+	text-align: center;
+	height: 120px
+}
+
+.zc-list .wl-box .dl-mar {
+	margin: 0 70px
+}
+
+.wl-list {
+	clear: both;
+	background: #fafafa;
+	padding-bottom: 20px
+}
+
+.wl-list .dl-title dt {
+	width: 450px
+}
+
+.wl-list .dl-title dt span {
+	top: 15px
+}
+
+.safe-box2 .img-safe,
+.safe-box2 .safe-dl {
+	float: left
+}
+
+.safe-box2 .safe-dl {
+	padding-top: 60px
+}
+
+.safe-box2 .safe-dl dt {
+	padding-bottom: 20px
+}
+
+.safe-box2 .img-safe {
+	padding-right: 30px
+}
+
+.safe-box .dt-mar {
+	margin: 25px 0
+}
+
+.wl-list .dl-title dt span {
+	background: #fafafa
+}
+
+.wl-list .dt-mar {
+	margin: 0 0 30px 0
+}
